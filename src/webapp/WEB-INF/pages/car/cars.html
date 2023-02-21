@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cars</title>
+    <meta charset="UTF-8">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        th, td {
+            width: 33%;
+            text-align: left;
+        }
+        .table-header th {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+<h1>Cars</h1>
+<table>
+    <thead class="table-header">
+    <tr>
+        <th>ID</th>
+        <th>Series</th>
+        <th>Engine</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${car}">
+        <td th:text="${car.id}" style="width: 33%;"></td>
+        <td th:text="${car.series}" style="width: 33%;"></td>
+        <td th:text="${car.engine}" style="width: 33%;"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th=" http://thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Все машины </title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:each="car : ${car}">-->
+<!--  <a th:href="@{/{id}(id=${car.getId()})}" th:text="${car.getSeries()}">user</a>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>Cars</title>-->
+<!--    <meta charset="UTF-8">-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Cars</h1>-->
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>Id</th>-->
+<!--        <th>Series</th>-->
+<!--        <th>Engine</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="car : ${car}">-->
+<!--        <td th:text="${car.id}"></td>-->
+<!--        <td th:text="${car.series}"></td>-->
+<!--        <td th:text="${car.engine}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--</body>-->
+<!--</html>-->
+
+
