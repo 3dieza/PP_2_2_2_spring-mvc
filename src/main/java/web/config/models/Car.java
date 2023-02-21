@@ -1,39 +1,46 @@
 package web.config.models;
-
 public class Car {
-    private int id;
-    private String series;
-    private String engine;
+    private Long id;
+    private String make;
+    private String model;
+    private int year;
 
-    public Car(int id, String series, String engine) {
+    public Car(Long id, String make, String model, int year) {
         this.id = id;
-        this.series = series;
-        this.engine = engine;
+        this.make = make;
+        this.model = model;
+        this.year = year;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getSeries() {
-        return series;
+    public String getMake() {
+        return make;
     }
 
-    public void setSeries(String series) {
-        this.series = series;
+    public void setMake(String make) {
+        this.make = make;
     }
 
-    public String getEngine() {
-        return engine;
+    public String getModel() {
+        return model;
     }
 
-    public void setEngine(String engine) {
-        this.engine = engine;
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 }
-
-
